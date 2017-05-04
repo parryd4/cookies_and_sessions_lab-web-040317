@@ -1,0 +1,14 @@
+<%= session.keys %>
+
+
+<br><br>
+<%= form_tag add_path do %>
+<label>Add item: </label>
+<%= text_field_tag :'product' %>
+<%= submit_tag 'add to cart' %>
+<% end %>
+
+<br>
+<% cart.each do |item| %>
+<p><%= item %></p>
+<% end %>
